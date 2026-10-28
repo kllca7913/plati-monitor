@@ -4,12 +4,12 @@
 <div class="scroll"><table id="fp_hod"></table></div></div>
 <div class="card"><h2 id="fp_dt"></h2><div class="scroll"><table id="fp_day"></table></div>
 <p class="muted" style="font-size:12px;margin:8px 0 0">每个格子：新增订单（近似）；下方小字为已覆盖的小时数。带 * 表示当天含有间隔超过90分钟的采集缺口，缺口内的新增已计入当天但无法分到具体小时。</p></div>
-<div class="card"><h2 id="fp_ht2"></h2><div class="scroll"><table id="fp_hr"></table></div>
-<p class="muted" style="font-size:12px;margin:8px 0 0">北京时间，列标签为该时段结束时刻，新到旧排列。“—”表示该时段无有效数据。列标签带 * 表示两次采集间隔明显不是1小时。</p></div>
+<div id="fp_hist"></div>
 <ul class="note"><li><b>重要说明（FunPay 数据是近似的替代指标）：</b>FunPay 不公开卖家的“已售数量”。这里统计的是买家在 FunPay 上对该卖家留下的、分类为“App Store &amp; iTunes”的新评价数量，作为订单数的代理指标：每小时新增 = 该小时内新出现的此类评价条数。</li>
 <li>评价数 ≠ 订单数：只有留评价的买家才会被计入，所以实际订单通常多于这里的数字；评价可能晚于下单时间出现，所以“最佳时段”可能比真实的下单高峰略晚。</li>
 <li>“App Store &amp; iTunes”分类同时包含礼品卡和 Apple ID 账号，评价里不区分，也不区分国家（美国/土耳其）。同一个卖家如果同时卖两个地区的卡，数字合在一起，因此每个卖家只放在其商品主要所在的一个地区榜单里。</li>
 <li>前10名是用公开数据按固定规则选出并固定下来的，不是 FunPay 官方销量榜；规则见页面底部“选择规则”。各卖家分开统计，不做跨卖家合计。</li>
+<li>完整的每小时历史永久保留并显示在页面上（按日期查看/对比日期），也可下载 <a href="funpay_hourly.csv" download>funpay_hourly.csv</a>（全部历史）。</li>
 <li>数据从首次采集（<span id="fp_first"></span>）开始，每小时采集一次；之前没有历史数据，“按小时”热力表需要几天才会填满，样本少的时段仅供参考。</li>
 <li><b>选择规则：</b><span id="fp_rule"></span></li></ul>
 </div>

@@ -26,14 +26,14 @@ def build_hourly():
     by={}
     for r in rows: by.setdefault((r['region'],r['seller_id']),{})[r['ts']]=r
     cols=tss[-25:][1:] if len(tss)>1 else []
-    H['cols']=cols; H['prev']=[tss[tss.index(c)-1] for c in cols]
+    H['cols']=cols; H['prev']=[tss[tss.index(c)-1] for c in cols]; H['fts']=tss[1:]; H['fprev']=tss[:-1]
     csvrows=[]; order=[]
     for r in rows:
         k=(r['region'],r['seller_id'])
         if k not in order: order.append(k)
     cut=F(tss[-1])-datetime.timedelta(hours=24)
     for k in order:
-        m=by[k]; vals=[];tot=0;cov=0;have=False;gaps=[]
+        m=by[k]; vals=[];fv=[];tot=0;cov=0;have=False;gaps=[]
         for i,t in enumerate(tss):
             if i==0: continue
             a=m.get(tss[i-1]); b=m.get(t); v=None; status='ok'
@@ -42,12 +42,13 @@ def build_hourly():
             else: v=int(b['cum_sales'])-int(a['cum_sales'])
             mins=int((F(t)-F(tss[i-1])).total_seconds()//60)
             csvrows.append([t,k[0],k[1],(b or a)['seller'],tss[i-1],mins,'' if v is None else v,b['cum_sales'] if b else '',status])
+            fv.append(v)
             if t in cols:
                 vals.append(v)
                 if v is not None and F(t)>cut: tot+=v;cov+=mins;have=True
         last=m.get(tss[-1]) or list(m.values())[-1]
         shop=next((s.get('shop_url') for s in data['sellers'] if s['region']==k[0] and str(s.get('seller_id',''))==k[1]),None) or next((s.get('shop_url') for s in data['sellers'] if s['region']==k[0] and s['seller']==last['seller']),None)
-        H['sellers'].append({'region':k[0],'seller':last['seller'],'shop_url':shop,'vals':vals,'total24':tot if have else None,'covered_min':cov,'cum':int(last['cum_sales'])})
+        H['sellers'].append({'region':k[0],'seller':last['seller'],'shop_url':shop,'vals':vals,'fvals':fv,'total24':tot if have else None,'covered_min':cov,'cum':int(last['cum_sales'])})
     return H,csvrows
 hourly,hcsv=build_hourly()
 data['hourly']=hourly
@@ -65,6 +66,7 @@ with open(os.path.join(OUT,'hourly.csv'),'w',newline='',encoding='utf-8') as f:
     w=csv.writer(f); w.writerow(['ts_end','region','seller_id','seller','ts_prev','elapsed_min','new_orders','cum_sales','status']); w.writerows(hcsv)
 json.dump(data,open(os.path.join(OUT,'data.json'),'w',encoding='utf-8'),ensure_ascii=False,indent=1)
 shutil.copy(os.path.join(D,'report.csv'),os.path.join(OUT,'report.csv'))
+HISTJS=open(os.path.join(D,'hist_view.js'),encoding='utf-8').read()
 TPL=r'''<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -80,7 +82,7 @@ th{background:#f9fafb;font-weight:600;font-size:12px}th:first-child,td:first-chi
 a{color:#2563eb;text-decoration:none}.muted{color:#9ca3af}.bar{display:flex;align-items:center;margin:6px 0;font-size:12px}
 .bar .n{width:96px;flex:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bar .t{flex:1;background:#f1f5f9;height:16px;border-radius:3px;margin:0 6px}
 .bar .f{height:16px;background:#2563eb;border-radius:3px;min-width:1px}.bar .v{width:52px;flex:none;text-align:right}
-.note{font-size:12px;color:#6b7280;line-height:1.7;padding:0 14px 24px}.note li{margin-bottom:4px}
+.hs{max-height:70vh;overflow:auto}.hs th{position:sticky;top:0;z-index:2}.hs th:first-child{z-index:3}select{font-size:13px;padding:4px 6px;max-width:60%}.note{font-size:12px;color:#6b7280;line-height:1.7;padding:0 14px 24px}.note li{margin-bottom:4px}
 </style></head><body>
 <header><h1>Plati 苹果礼品卡卖家每日销量监测</h1>
 <p>最后更新：<span id="upd"></span></p><p>最近一次采集：<span id="snap"></span></p>
@@ -93,10 +95,10 @@ a{color:#2563eb;text-decoration:none}.muted{color:#9ca3af}.bar{display:flex;alig
 </div>
 <div id="hourly" style="display:none">
 <div class="card"><h2>每小时新增订单（近似）· 近24小时合计</h2><div class="sub" style="font-size:12px;color:#6b7280;margin-bottom:8px">先看美国/土耳其分区，各卖家分开，不做跨卖家合计。</div><div id="hbars"></div></div>
-<div class="card"><h2>每小时明细（北京时间，列标签为该时段结束时刻）</h2><div class="scroll"><table id="htbl"></table></div>
-<p class="muted" style="font-size:12px;margin:8px 0 0">可左右滑动，新到旧排列。“—”表示该时段暂无数据（尚无上一次快照，或当次/上次有商品未取到，为避免误差不计算）。若两次快照间隔明显不是1小时，列标签带“*”。</p></div>
+<div id="h_US_box"></div><div id="h_TR_box"></div>
 <ul class="note"><li><b>每小时数据（近似值）：</b>每小时采集一次各卖家商品的“累计已售”计数器（同样按卖家合并所有面额），每小时新增 = 相邻两次快照的累计之差。</li>
 <li>每小时数据从首次每小时快照（<span id="hfirst"></span>）开始，之前没有数据；每小时采集与每晚 20:00 的日统计互相独立，两者数字可能不完全一致。</li>
+<li>完整的每小时历史会永久保留并显示在上方表格（可按日期查看/选“全部”），也可下载 <a href="hourly.csv" download>hourly.csv</a>（全部历史）。</li>
 <li>“24h合计”只对单个卖家，累加最近24小时内有数据的时段，并标注已覆盖的小时数；不同卖家之间不求和。</li></ul></div>
 __FPHTML__
 <ul class="note" id="dnote"><li><b>数据说明（近似值）：</b>数据来自 Plati 公开搜索接口中各商品的“累计已售”计数器，对每个卖家下固定的苹果礼品卡商品，按卖家合并所有面额后求和。</li>
@@ -115,11 +117,7 @@ function renderH(){var H=DATA.hourly,cols=H.cols.slice(),rc=cols.slice().reverse
   L.forEach(function(s){var v=s.total24,w=v==null?0:Math.max(0,v)/mx*100,hrs=Math.round(s.covered_min/6)/10;
    b+='<div class="bar"><span class="n">'+esc(s.seller)+'</span><span class="t"><div class="f" style="width:'+w+'%"></div></span><span class="v" style="width:92px">'+(v==null?"—":f(v)+' <span class="muted">/'+hrs+'h</span>')+'</span></div>'})});
  document.getElementById("hbars").innerHTML=b+(cols.length?'':'<p class="muted" style="font-size:12px">目前只有首次快照作为基线，下一次每小时快照后开始显示新增订单。</p>');
- var h='<tr><th>卖家</th><th>24h合计</th>';rc.forEach(function(t){var i=cols.indexOf(t);h+='<th>'+hl(t,H.prev[i])+'</th>'});h+='</tr>';
- ["US","TR"].forEach(function(r){h+='<tr><td colspan="'+(2+rc.length)+'" style="background:#eef2ff;font-weight:600">'+(r=="US"?"美国卡":"土耳其卡")+'</td></tr>';
-  S.filter(function(s){return s.region==r}).forEach(function(s){h+='<tr><td>'+esc(s.seller)+'</td><td><b>'+f(s.total24)+'</b></td>';
-   rc.forEach(function(t){var i=cols.indexOf(t);h+='<td>'+f(s.vals[i])+'</td>'});h+='</tr>'})});
- document.getElementById("htbl").innerHTML=h}
+ ["US","TR"].forEach(function(r){var L=S.filter(function(s){return s.region==r});histMount("h_"+r+"_box","hp"+r,{fts:H.fts||[],fprev:H.fprev||[],sellers:L},"Plati "+(r=="US"?"美国卡":"土耳其卡"),"hourly.csv")})}
 function show(){var H=region=="H",X=region=="FU"||region=="FT";document.getElementById("daily").style.display=(H||X)?"none":"";document.getElementById("dnote").style.display=(H||X)?"none":"";document.getElementById("hourly").style.display=H?"":"none";var fe=document.getElementById("fp");if(fe)fe.style.display=X?"":"none";if(X)fpRender();else if(H)renderH();else render()}
 function f(n){return n==null?"—":String(n).replace(/\B(?=(\d{3})+(?!\d))/g,",")}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
@@ -140,9 +138,10 @@ function render(){
 document.getElementById("upd").textContent=DATA.updated;document.getElementById("snap").textContent=DATA.last_snapshot;
 Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(t){t.onclick=function(){region=t.getAttribute("data-r");
  Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(x){x.classList.toggle("on",x===t)});show()}});
+__HISTJS__
 __FPJS__
 show();
 </script></body></html>'''
 js=json.dumps(data,ensure_ascii=False).replace('</','<\\/')
-open(os.path.join(OUT,'index.html'),'w',encoding='utf-8').write(TPL.replace('__FPHTML__',FPHTML).replace('__FPJS__',FPJS).replace('__DATA__',js))
+open(os.path.join(OUT,'index.html'),'w',encoding='utf-8').write(TPL.replace('__FPHTML__',FPHTML).replace('__HISTJS__',HISTJS).replace('__FPJS__',FPJS).replace('__DATA__',js))
 print('built',os.path.join(OUT,'index.html'))

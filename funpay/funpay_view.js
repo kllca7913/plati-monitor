@@ -6,7 +6,6 @@ function fpRender(){
  document.getElementById("fp_rule").textContent=(DATA.funpay_rule||"");
  document.getElementById("fp_ht").textContent="FunPay "+nm+"卡 · 一天中哪个小时订单最多（按北京时间，各卖家分开）";
  document.getElementById("fp_dt").textContent="FunPay "+nm+"卡 · 每天新增订单（近似）";
- document.getElementById("fp_ht2").textContent="FunPay "+nm+"卡 · 每小时新增订单（近似，近24个时段）";
  // hour-of-day heatmap
  var h='<tr><th>卖家</th><th>最佳时段</th>';for(var i=0;i<24;i++)h+='<th>'+i+'点</th>';h+='</tr>';
  S.forEach(function(s){var mx=0,bi=-1;s.avg.forEach(function(v,i){if(v!=null&&v>mx){mx=v;bi=i}});
@@ -21,9 +20,4 @@ function fpRender(){
  S.forEach(function(s){h+='<tr><td>'+esc(s.seller)+'</td>';ds.forEach(function(d){var e=s.daily[d];
   h+=e?'<td><b>'+e.new+(e.gap?'*':'')+'</b><br><span class="muted">'+Math.round(e.min/6)/10+'h</span></td>':'<td class="muted">—</td>'});h+='</tr>'});
  document.getElementById("fp_day").innerHTML=h;
- // hourly
- var rc=FP.cols.slice().reverse();
- h='<tr><th>卖家</th><th>24h合计</th>';rc.forEach(function(t){var i=FP.cols.indexOf(t);h+='<th>'+hl(t,FP.prev[i])+'</th>'});h+='</tr>';
- S.forEach(function(s){h+='<tr><td>'+esc(s.seller)+'</td><td><b>'+f(s.total24)+'</b></td>';
-  rc.forEach(function(t){var i=FP.cols.indexOf(t);h+='<td>'+f(s.vals[i])+'</td>'});h+='</tr>'});
- document.getElementById("fp_hr").innerHTML=h}
+ histMount("fp_hist","fp"+R,{fts:FP.fts||[],fprev:FP.fprev||[],sellers:S},"FunPay "+nm+"卡","funpay_hourly.csv")}

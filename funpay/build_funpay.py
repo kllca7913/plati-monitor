@@ -15,7 +15,7 @@ def build(outdir=None):
     rows.sort(key=lambda r:r['ts'])
     tss=sorted({r['ts'] for r in rows}); out['first_ts']=tss[0]; out['last_ts']=tss[-1]; out['nsnap']=len(tss)
     cols=tss[-25:][1:] if len(tss)>1 else []
-    out['cols']=cols; out['prev']=[tss[tss.index(c)-1] for c in cols]
+    out['cols']=cols; out['prev']=[tss[tss.index(c)-1] for c in cols]; out['fts']=tss[1:]; out['fprev']=tss[:-1]
     by={};order=[]
     for r in rows:
         if r['seller_id'] not in by: by[r['seller_id']]=[]; order.append(r['seller_id'])
@@ -41,9 +41,13 @@ def build(outdir=None):
         for c,pv in zip(cols,out['prev']):
             b=byts.get(c); a=byts.get(pv)
             vals.append(int(b['apple_new']) if (a and b and b['apple_new']!='') else None)
+        fvals=[]
+        for c,pv in zip(tss[1:],tss[:-1]):
+            b=byts.get(c); a=byts.get(pv)
+            fvals.append(int(b['apple_new']) if (a and b and b['apple_new']!='') else None)
         avg=[round(hsum[h]/hobs[h],2) if hobs[h] else None for h in range(24)]
         for h in range(24): hod_csv.append([last['region'],uid,last['seller'],h,hsum[h],hobs[h],'' if avg[h] is None else avg[h]])
-        out['sellers'].append({'region':last['region'],'seller':last['seller'],'uid':uid,'url':last['profile_url'],'vals':vals,
+        out['sellers'].append({'region':last['region'],'seller':last['seller'],'uid':uid,'url':last['profile_url'],'vals':vals,'fvals':fvals,
             'total24':tot24 if have24 else None,'cov24':cov24,'daily':daily,'hsum':hsum,'hobs':hobs,'avg':avg,
             'cum':int(last['apple_cum']),'total_reviews':int(last['total_reviews'])})
     out['dates']=sorted(alldates)
