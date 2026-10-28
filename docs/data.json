@@ -224,13 +224,14 @@
    "new": {}
   }
  ],
- "updated": "2026-10-29 00:11（北京时间）",
+ "updated": "2026-10-29 01:08（北京时间）",
  "last_snapshot": "2026-10-28 20:14",
  "hourly": {
   "cols": [
    "2026-10-28T22:21",
    "2026-10-28T23:04",
-   "2026-10-29T00:05"
+   "2026-10-29T00:05",
+   "2026-10-29T01:08"
   ],
   "sellers": [
    {
@@ -240,11 +241,12 @@
     "vals": [
      1,
      165,
-     203
+     203,
+     233
     ],
-    "total24": 369,
-    "covered_min": 106,
-    "cum": 307381
+    "total24": 602,
+    "covered_min": 169,
+    "cum": 307614
    },
    {
     "region": "TR",
@@ -253,11 +255,12 @@
     "vals": [
      0,
      1,
-     1
+     1,
+     2
     ],
-    "total24": 2,
-    "covered_min": 106,
-    "cum": 42022
+    "total24": 4,
+    "covered_min": 169,
+    "cum": 42024
    },
    {
     "region": "TR",
@@ -266,11 +269,12 @@
     "vals": [
      0,
      2,
-     9
+     9,
+     6
     ],
-    "total24": 11,
-    "covered_min": 106,
-    "cum": 29021
+    "total24": 17,
+    "covered_min": 169,
+    "cum": 29027
    },
    {
     "region": "TR",
@@ -279,11 +283,12 @@
     "vals": [
      0,
      3,
-     4
+     4,
+     1
     ],
-    "total24": 7,
-    "covered_min": 106,
-    "cum": 28789
+    "total24": 8,
+    "covered_min": 169,
+    "cum": 28790
    },
    {
     "region": "TR",
@@ -292,11 +297,12 @@
     "vals": [
      0,
      2,
-     2
+     2,
+     3
     ],
-    "total24": 4,
-    "covered_min": 106,
-    "cum": 24995
+    "total24": 7,
+    "covered_min": 169,
+    "cum": 24998
    },
    {
     "region": "TR",
@@ -305,11 +311,12 @@
     "vals": [
      0,
      3,
-     3
+     3,
+     4
     ],
-    "total24": 6,
-    "covered_min": 106,
-    "cum": 19530
+    "total24": 10,
+    "covered_min": 169,
+    "cum": 19534
    },
    {
     "region": "TR",
@@ -318,10 +325,11 @@
     "vals": [
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 106,
+    "covered_min": 169,
     "cum": 19111
    },
    {
@@ -331,10 +339,11 @@
     "vals": [
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 106,
+    "covered_min": 169,
     "cum": 13782
    },
    {
@@ -344,11 +353,12 @@
     "vals": [
      1,
      2,
-     0
+     0,
+     3
     ],
-    "total24": 3,
-    "covered_min": 106,
-    "cum": 13440
+    "total24": 6,
+    "covered_min": 169,
+    "cum": 13443
    },
    {
     "region": "TR",
@@ -357,10 +367,11 @@
     "vals": [
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 106,
+    "covered_min": 169,
     "cum": 10251
    },
    {
@@ -370,11 +381,12 @@
     "vals": [
      0,
      26,
-     38
+     38,
+     41
     ],
-    "total24": 64,
-    "covered_min": 106,
-    "cum": 475111
+    "total24": 105,
+    "covered_min": 169,
+    "cum": 475152
    },
    {
     "region": "US",
@@ -383,11 +395,12 @@
     "vals": [
      1,
      4,
-     31
+     31,
+     24
     ],
-    "total24": 36,
-    "covered_min": 106,
-    "cum": 215859
+    "total24": 60,
+    "covered_min": 169,
+    "cum": 215883
    },
    {
     "region": "US",
@@ -396,10 +409,11 @@
     "vals": [
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 106,
+    "covered_min": 169,
     "cum": 43121
    },
    {
@@ -409,11 +423,12 @@
     "vals": [
      1,
      2,
-     5
+     5,
+     10
     ],
-    "total24": 8,
-    "covered_min": 106,
-    "cum": 33542
+    "total24": 18,
+    "covered_min": 169,
+    "cum": 33552
    },
    {
     "region": "US",
@@ -422,10 +437,11 @@
     "vals": [
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 106,
+    "covered_min": 169,
     "cum": 27006
    },
    {
@@ -435,11 +451,12 @@
     "vals": [
      0,
      0,
-     4
+     4,
+     6
     ],
-    "total24": 4,
-    "covered_min": 106,
-    "cum": 15618
+    "total24": 10,
+    "covered_min": 169,
+    "cum": 15624
    },
    {
     "region": "US",
@@ -448,10 +465,11 @@
     "vals": [
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 106,
+    "covered_min": 169,
     "cum": 13272
    },
    {
@@ -461,10 +479,11 @@
     "vals": [
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 106,
+    "covered_min": 169,
     "cum": 12853
    },
    {
@@ -474,10 +493,11 @@
     "vals": [
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 106,
+    "covered_min": 169,
     "cum": 11963
    },
    {
@@ -487,19 +507,21 @@
     "vals": [
      0,
      8,
-     3
+     3,
+     6
     ],
-    "total24": 11,
-    "covered_min": 106,
-    "cum": 11322
+    "total24": 17,
+    "covered_min": 169,
+    "cum": 11328
    }
   ],
   "first_ts": "2026-10-28T22:19",
-  "last_ts": "2026-10-29T00:05",
+  "last_ts": "2026-10-29T01:08",
   "prev": [
    "2026-10-28T22:19",
    "2026-10-28T22:21",
-   "2026-10-28T23:04"
+   "2026-10-28T23:04",
+   "2026-10-29T00:05"
   ]
  },
  "funpay": {
