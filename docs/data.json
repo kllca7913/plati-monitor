@@ -224,7 +224,7 @@
    "new": {}
   }
  ],
- "updated": "2026-10-28 23:11（北京时间）",
+ "updated": "2026-10-28 23:16（北京时间）",
  "last_snapshot": "2026-10-28 20:14",
  "hourly": {
   "cols": [
@@ -487,10 +487,18 @@
     "seller": "Neodejimi",
     "uid": "12873285",
     "url": "https://funpay.com/en/users/12873285/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -577,10 +585,18 @@
     "seller": "Dima006156",
     "uid": "711113",
     "url": "https://funpay.com/en/users/711113/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -667,10 +683,18 @@
     "seller": "Wonho",
     "uid": "582023",
     "url": "https://funpay.com/en/users/582023/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -757,10 +781,18 @@
     "seller": "Mercurial75",
     "uid": "4646882",
     "url": "https://funpay.com/en/users/4646882/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -840,17 +872,25 @@
      null
     ],
     "cum": 0,
-    "total_reviews": 13264
+    "total_reviews": 13266
    },
    {
     "region": "TR",
     "seller": "AnIMichin",
     "uid": "862048",
     "url": "https://funpay.com/en/users/862048/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -937,10 +977,18 @@
     "seller": "lipay",
     "uid": "7852181",
     "url": "https://funpay.com/en/users/7852181/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -1027,10 +1075,18 @@
     "seller": "VQStraight",
     "uid": "18832359",
     "url": "https://funpay.com/en/users/18832359/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -1117,10 +1173,18 @@
     "seller": "Clause",
     "uid": "2520737",
     "url": "https://funpay.com/en/users/2520737/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -1207,10 +1271,18 @@
     "seller": "Cold9999",
     "uid": "19848114",
     "url": "https://funpay.com/en/users/19848114/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -1297,10 +1369,18 @@
     "seller": "NostaGame",
     "uid": "8285779",
     "url": "https://funpay.com/en/users/8285779/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -1387,10 +1467,18 @@
     "seller": "Skymannn",
     "uid": "6354852",
     "url": "https://funpay.com/en/users/6354852/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -1477,10 +1565,18 @@
     "seller": "PandaKeys",
     "uid": "21587905",
     "url": "https://funpay.com/en/users/21587905/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -1567,10 +1663,18 @@
     "seller": "SpiriTFury",
     "uid": "4454294",
     "url": "https://funpay.com/en/users/4454294/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -1657,10 +1761,18 @@
     "seller": "zeskasteam",
     "uid": "21563105",
     "url": "https://funpay.com/en/users/21563105/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     1
+    ],
+    "total24": 1,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 1,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -1739,18 +1851,26 @@
      null,
      null
     ],
-    "cum": 0,
-    "total_reviews": 294
+    "cum": 1,
+    "total_reviews": 295
    },
    {
     "region": "US",
     "seller": "Heyters01",
     "uid": "15380716",
     "url": "https://funpay.com/en/users/15380716/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -1837,10 +1957,18 @@
     "seller": "Aleks2929",
     "uid": "4089531",
     "url": "https://funpay.com/en/users/4089531/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -1927,10 +2055,18 @@
     "seller": "GameZona",
     "uid": "12815044",
     "url": "https://funpay.com/en/users/12815044/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -2010,17 +2146,25 @@
      null
     ],
     "cum": 0,
-    "total_reviews": 15998
+    "total_reviews": 15999
    },
    {
     "region": "US",
     "seller": "PlayNikBrazer",
     "uid": "17486205",
     "url": "https://funpay.com/en/users/17486205/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -2100,17 +2244,25 @@
      null
     ],
     "cum": 0,
-    "total_reviews": 2095
+    "total_reviews": 2096
    },
    {
     "region": "US",
     "seller": "maltsev1999",
     "uid": "13697944",
     "url": "https://funpay.com/en/users/13697944/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -2197,10 +2349,18 @@
     "seller": "viha9877",
     "uid": "6686804",
     "url": "https://funpay.com/en/users/6686804/",
-    "vals": [],
-    "total24": null,
-    "cov24": 0,
-    "daily": {},
+    "vals": [
+     0
+    ],
+    "total24": 0,
+    "cov24": 5,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 5,
+      "gap": false
+     }
+    },
     "hsum": [
      0,
      0,
@@ -2280,15 +2440,21 @@
      null
     ],
     "cum": 0,
-    "total_reviews": 65191
+    "total_reviews": 65192
    }
   ],
-  "cols": [],
-  "prev": [],
-  "dates": [],
+  "cols": [
+   "2026-10-28T23:16"
+  ],
+  "prev": [
+   "2026-10-28T23:11"
+  ],
+  "dates": [
+   "2026-10-28"
+  ],
   "first_ts": "2026-10-28T23:11",
-  "last_ts": "2026-10-28T23:11",
-  "nsnap": 1
+  "last_ts": "2026-10-28T23:16",
+  "nsnap": 2
  },
  "funpay_rule": "前10名不是 FunPay 官方榜单（FunPay 不公开销量），是 2026-10-28 晚按公开数据选出并固定的：在“App Store & iTunes → Gift Cards”分类（funpay.com/en/lots/1316/）有商品的卖家中，统计其“App Store & iTunes”类买家评价在本月（10月1日–28日）的条数（最多读取最新1000条评价，达到上限的数字是下限），按条数取前10。地区：卖家的 TRY 面额商品占其 TRY+USD 商品60%以上归入土耳其榜，USD 占60%以上归入美国榜；两边都卖且比例接近的大卖家（如 theptzshop、BadMaxi、nbshopgames、C00ki3、shiqu）因评价无法区分国家而没有入选。名单固定，不会自动更新。"
 }
