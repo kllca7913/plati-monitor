@@ -1,25 +1,18 @@
 #!/usr/bin/env python3
-"""One-off selection of the 20 tracked sellers (run once; result frozen in funpay_sellers.json).
-Inputs: survey.json (per candidate seller: offers per currency in the Gift Cards lot https://funpay.com/en/lots/1316/, total reviews, Apple share of latest <=100 reviews)
-        calib_A.json / calib_B.json (total review counts of all candidates at two times ~40 min apart)
-Estimated Apple review rate = (d total reviews / d hours) x (Apple share of latest <=100 reviews).
-Region eligibility: seller must have >=1 offer in the region currency (TRY for TR, USD for US) AND region offers >= REG_PURITY of ALL its offers in the lot
-(sellers spread over many countries cannot be attributed to one region, since reviews do not state the country)."""
-import json,sys
-REG_PURITY=float(sys.argv[1]) if len(sys.argv)>1 else 0.5
-sv=json.load(open('survey.json')); A=json.load(open('calib_A.json')); B=json.load(open('calib_B.json'))
-rows=[]
-for u,v in sv.items():
-    if u not in A or u not in B or A[u][0] is None or B[u][0] is None: continue
-    dh=(B[u][1]-A[u][1])/3600; d=B[u][0]-A[u][0]
-    share=v['apple']/v['n'] if v['n'] else 0
-    rows.append(dict(uid=u,name=v['name'],d=d,hours=round(dh,2),share=round(share,2),rate=round(d/dh*share,2),tot=v['tot'],
-                     tr=v['try'],us=v['usd'],all=v['all'],ptr=v['try']/v['all'],pus=v['usd']/v['all']))
-sel=[];used=set()
-for reg,key,pk in (('TR','tr','ptr'),('US','us','pus')):
-    c=[r for r in rows if r[key]>=1 and r[pk]>=REG_PURITY and r['uid'] not in used]
-    c.sort(key=lambda r:-r['rate'])
-    print('====',reg,len(c),'eligible')
-    for i,r in enumerate(c[:14]): print(i+1,r['uid'],r['name'],'rate/h',r['rate'],'dTot',r['d'],'in',r['hours'],'h share',r['share'],'offers tr/us/all',r['tr'],r['us'],r['all'])
-    for r in c[:10]: sel.append(dict(uid=r['uid'],name=r['name'],region=reg,est_rate_per_h=r['rate'],tr_offers=r['tr'],us_offers=r['us'],all_offers=r['all'])); used.add(r['uid'])
-if '--write' in sys.argv: json.dump(sel,open('funpay_sellers.json','w'),ensure_ascii=False,indent=1); print('written',len(sel))
+"""One-off selection of the 20 tracked sellers (frozen afterwards in funpay_sellers.json). Inputs: survey.json, survey2.json (see survey.py / survey2.py).
+Rule: candidates = sellers with offers in FunPay 'App Store & iTunes > Gift Cards' (https://funpay.com/en/lots/1316/) whose latest<=100 reviews contain >=3 Apple reviews (or who have <100 reviews).
+Score = number of reviews in category 'App Store & iTunes' labelled 'This month' (Oct 1-28 2026), reading up to 1000 newest reviews (lower bound if capped).
+Region: TR if >=60% of the seller's TRY+USD offers are TRY-denominated, US if >=60% are USD-denominated; sellers in between are excluded (their reviews cannot be attributed to one country).
+Top 10 per region by score."""
+import json
+sv=json.load(open('survey.json')); s2=json.load(open('survey2.json')); sel=[]
+for reg,key in (('TR','try'),('US','usd')):
+    c=[]
+    for u,v in s2.items():
+        s=sv[u]
+        if s[key]>=1 and s[key]/(s['try']+s['usd'])>=0.6: c.append((v['apple_month'],u,s,v))
+    c.sort(key=lambda x:-x[0])
+    for sc,u,s,v in c[:10]:
+        sel.append(dict(uid=u,name=s['name'],region=reg,score_apple_reviews_this_month=sc,capped=v['censored'],tr_offers=s['try'],usd_offers=s['usd'],all_offers=s['all'],total_reviews_all_categories=s['tot']))
+json.dump(sel,open('funpay_sellers.json','w'),ensure_ascii=False,indent=1)
+for r in sel: print(r['region'],r['uid'],r['name'],r['score_apple_reviews_this_month'],'(capped)' if r['capped'] else '')

@@ -1,0 +1,222 @@
+[
+ {
+  "uid": "12873285",
+  "name": "Neodejimi",
+  "region": "TR",
+  "score_apple_reviews_this_month": 652,
+  "capped": false,
+  "tr_offers": 2,
+  "usd_offers": 0,
+  "all_offers": 2,
+  "total_reviews_all_categories": 1313
+ },
+ {
+  "uid": "711113",
+  "name": "Dima006156",
+  "region": "TR",
+  "score_apple_reviews_this_month": 387,
+  "capped": true,
+  "tr_offers": 20,
+  "usd_offers": 9,
+  "all_offers": 32,
+  "total_reviews_all_categories": 10463
+ },
+ {
+  "uid": "582023",
+  "name": "Wonho",
+  "region": "TR",
+  "score_apple_reviews_this_month": 361,
+  "capped": true,
+  "tr_offers": 17,
+  "usd_offers": 9,
+  "all_offers": 45,
+  "total_reviews_all_categories": 4522
+ },
+ {
+  "uid": "4646882",
+  "name": "Mercurial75",
+  "region": "TR",
+  "score_apple_reviews_this_month": 300,
+  "capped": true,
+  "tr_offers": 14,
+  "usd_offers": 2,
+  "all_offers": 38,
+  "total_reviews_all_categories": 13261
+ },
+ {
+  "uid": "862048",
+  "name": "AnIMichin",
+  "region": "TR",
+  "score_apple_reviews_this_month": 205,
+  "capped": false,
+  "tr_offers": 1,
+  "usd_offers": 0,
+  "all_offers": 2,
+  "total_reviews_all_categories": 517
+ },
+ {
+  "uid": "7852181",
+  "name": "lipay",
+  "region": "TR",
+  "score_apple_reviews_this_month": 164,
+  "capped": false,
+  "tr_offers": 10,
+  "usd_offers": 5,
+  "all_offers": 32,
+  "total_reviews_all_categories": 578
+ },
+ {
+  "uid": "18832359",
+  "name": "VQStraight",
+  "region": "TR",
+  "score_apple_reviews_this_month": 160,
+  "capped": false,
+  "tr_offers": 13,
+  "usd_offers": 6,
+  "all_offers": 20,
+  "total_reviews_all_categories": 714
+ },
+ {
+  "uid": "2520737",
+  "name": "Clause",
+  "region": "TR",
+  "score_apple_reviews_this_month": 151,
+  "capped": true,
+  "tr_offers": 16,
+  "usd_offers": 0,
+  "all_offers": 28,
+  "total_reviews_all_categories": 9503
+ },
+ {
+  "uid": "19848114",
+  "name": "Cold9999",
+  "region": "TR",
+  "score_apple_reviews_this_month": 138,
+  "capped": false,
+  "tr_offers": 11,
+  "usd_offers": 2,
+  "all_offers": 22,
+  "total_reviews_all_categories": 400
+ },
+ {
+  "uid": "8285779",
+  "name": "NostaGame",
+  "region": "TR",
+  "score_apple_reviews_this_month": 128,
+  "capped": false,
+  "tr_offers": 13,
+  "usd_offers": 0,
+  "all_offers": 13,
+  "total_reviews_all_categories": 1912
+ },
+ {
+  "uid": "6354852",
+  "name": "Skymannn",
+  "region": "US",
+  "score_apple_reviews_this_month": 518,
+  "capped": false,
+  "tr_offers": 6,
+  "usd_offers": 15,
+  "all_offers": 33,
+  "total_reviews_all_categories": 9601
+ },
+ {
+  "uid": "21587905",
+  "name": "PandaKeys",
+  "region": "US",
+  "score_apple_reviews_this_month": 415,
+  "capped": false,
+  "tr_offers": 1,
+  "usd_offers": 8,
+  "all_offers": 9,
+  "total_reviews_all_categories": 489
+ },
+ {
+  "uid": "4454294",
+  "name": "SpiriTFury",
+  "region": "US",
+  "score_apple_reviews_this_month": 303,
+  "capped": false,
+  "tr_offers": 1,
+  "usd_offers": 11,
+  "all_offers": 12,
+  "total_reviews_all_categories": 26934
+ },
+ {
+  "uid": "21563105",
+  "name": "zeskasteam",
+  "region": "US",
+  "score_apple_reviews_this_month": 294,
+  "capped": false,
+  "tr_offers": 0,
+  "usd_offers": 2,
+  "all_offers": 2,
+  "total_reviews_all_categories": 294
+ },
+ {
+  "uid": "15380716",
+  "name": "Heyters01",
+  "region": "US",
+  "score_apple_reviews_this_month": 233,
+  "capped": false,
+  "tr_offers": 0,
+  "usd_offers": 1,
+  "all_offers": 1,
+  "total_reviews_all_categories": 1188
+ },
+ {
+  "uid": "4089531",
+  "name": "Aleks2929",
+  "region": "US",
+  "score_apple_reviews_this_month": 223,
+  "capped": false,
+  "tr_offers": 0,
+  "usd_offers": 1,
+  "all_offers": 2,
+  "total_reviews_all_categories": 5577
+ },
+ {
+  "uid": "12815044",
+  "name": "GameZona",
+  "region": "US",
+  "score_apple_reviews_this_month": 221,
+  "capped": true,
+  "tr_offers": 3,
+  "usd_offers": 9,
+  "all_offers": 17,
+  "total_reviews_all_categories": 15997
+ },
+ {
+  "uid": "17486205",
+  "name": "PlayNikBrazer",
+  "region": "US",
+  "score_apple_reviews_this_month": 208,
+  "capped": false,
+  "tr_offers": 0,
+  "usd_offers": 4,
+  "all_offers": 4,
+  "total_reviews_all_categories": 2095
+ },
+ {
+  "uid": "13697944",
+  "name": "maltsev1999",
+  "region": "US",
+  "score_apple_reviews_this_month": 203,
+  "capped": false,
+  "tr_offers": 0,
+  "usd_offers": 3,
+  "all_offers": 19,
+  "total_reviews_all_categories": 304
+ },
+ {
+  "uid": "6686804",
+  "name": "viha9877",
+  "region": "US",
+  "score_apple_reviews_this_month": 200,
+  "capped": true,
+  "tr_offers": 2,
+  "usd_offers": 6,
+  "all_offers": 8,
+  "total_reviews_all_categories": 65187
+ }
+]
