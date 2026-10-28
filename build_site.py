@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""Builds docs/index.html (self-contained), docs/data.json, docs/report.csv from report_data.json/history.csv. No cross-seller totals."""
+import json,os,shutil,subprocess,sys,datetime,csv,html
+D=os.path.dirname(os.path.abspath(__file__))
+OUT=os.path.join(D,'docs'); os.makedirs(OUT,exist_ok=True)
+subprocess.run([sys.executable,os.path.join(D,'build_report.py')],check=True,stdout=subprocess.DEVNULL)
+data=json.load(open(os.path.join(D,'report_data.json'),encoding='utf-8'))
+try:
+    import zoneinfo; now=datetime.datetime.now(zoneinfo.ZoneInfo('Asia/Shanghai'))
+except Exception:
+    now=datetime.datetime.utcnow()+datetime.timedelta(hours=8)
+data['updated']=now.strftime('%Y-%m-%d %H:%M')+'（北京时间）'
+# last snapshot time from history.csv
+last=None
+for r in csv.DictReader(open(os.path.join(D,'history.csv'),encoding='utf-8')): last=(r['date'],r['time'])
+data['last_snapshot']=(last[0]+' '+last[1]) if last else ''
+json.dump(data,open(os.path.join(OUT,'data.json'),'w',encoding='utf-8'),ensure_ascii=False,indent=1)
+shutil.copy(os.path.join(D,'report.csv'),os.path.join(OUT,'report.csv'))
+TPL=r'''<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plati 苹果礼品卡卖家每日销量监测</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f6f8;color:#222;font-size:14px}
+header{background:#1f2937;color:#fff;padding:16px 14px}h1{margin:0 0 6px;font-size:18px}header p{margin:2px 0;font-size:12px;color:#cbd5e1}
+.tabs{display:flex;gap:8px;padding:12px 14px 0}.tab{flex:1;padding:10px 0;text-align:center;border-radius:8px;background:#e5e7eb;font-weight:600;cursor:pointer;border:0;font-size:14px}
+.tab.on{background:#2563eb;color:#fff}.card{background:#fff;margin:12px 14px;border-radius:10px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+h2{font-size:15px;margin:0 0 10px}.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:max-content}th,td{padding:7px 8px;border-bottom:1px solid #eee;text-align:right;white-space:nowrap}
+th{background:#f9fafb;font-weight:600;font-size:12px}th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:#fff}th:first-child{background:#f9fafb}
+a{color:#2563eb;text-decoration:none}.muted{color:#9ca3af}.bar{display:flex;align-items:center;margin:6px 0;font-size:12px}
+.bar .n{width:96px;flex:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bar .t{flex:1;background:#f1f5f9;height:16px;border-radius:3px;margin:0 6px}
+.bar .f{height:16px;background:#2563eb;border-radius:3px;min-width:1px}.bar .v{width:52px;flex:none;text-align:right}
+.note{font-size:12px;color:#6b7280;line-height:1.7;padding:0 14px 24px}.note li{margin-bottom:4px}
+</style></head><body>
+<header><h1>Plati 苹果礼品卡卖家每日销量监测</h1>
+<p>最后更新：<span id="upd"></span></p><p>最近一次采集：<span id="snap"></span></p>
+<p>每天 20:00（北京时间）自动记录；各卖家分开统计，不做跨卖家合计。</p></header>
+<div class="tabs"><button class="tab on" data-r="US">美国卡 前10卖家</button><button class="tab" data-r="TR">土耳其卡 前10卖家</button></div>
+<div class="card"><h2 id="bt"></h2><div id="bars"></div></div>
+<div class="card"><h2 id="tt"></h2><div class="scroll"><table id="tbl"></table></div>
+<p class="muted" style="font-size:12px;margin:8px 0 0">表格可左右滑动；日期按新到旧排列。单元格“新增/累计”：上为当日新增订单，下为累计销量。</p></div>
+<ul class="note"><li><b>数据说明（近似值）：</b>数据来自 Plati 公开搜索接口中各商品的“累计已售”计数器，对每个卖家下固定的苹果礼品卡商品，按卖家合并所有面额后求和。</li>
+<li>每日新增订单 = 当晚 20:00 快照与上一日快照的累计销量之差，并非卖家后台的真实订单数。</li>
+<li>若某商品当次搜索未被返回，则不会计入该卖家，数字可能略偏低；“—”表示当天无对比数据（首日基线或缺数据）。</li>
+<li>各卖家之间不求和；美国卡与土耳其卡分开统计，同一卖家可能同时出现在两个榜单中（分别统计各自的商品）。</li></ul>
+<script>
+var DATA=__DATA__;
+var dates=DATA.dates.slice().reverse(),region="US";
+function f(n){return n==null?"—":String(n).replace(/\B(?=(\d{3})+(?!\d))/g,",")}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function render(){
+ var S=DATA.sellers.filter(function(s){return s.region==region});
+ var name=region=="US"?"美国":"土耳其",ld=DATA.dates[DATA.dates.length-1];
+ document.getElementById("tt").textContent=name+"苹果礼品卡 · 各卖家销量";
+ document.getElementById("bt").textContent=name+"卡 · "+ld+" 各卖家新增订单（近似）";
+ var mx=1;S.forEach(function(s){if(s.new[ld]>mx)mx=s.new[ld]});
+ var b="";S.forEach(function(s){var v=s.new[ld];var w=v==null?0:Math.max(0,v)/mx*100;
+  b+='<div class="bar"><span class="n">'+esc(s.seller)+'</span><span class="t"><div class="f" style="width:'+w+'%"></div></span><span class="v">'+(v==null?"—":f(v))+'</span></div>'});
+ document.getElementById("bars").innerHTML=b+(S.every(function(s){return s.new[ld]==null})?'<p class="muted" style="font-size:12px">首日为基线，次日起显示新增订单。</p>':'');
+ var h='<tr><th>卖家</th><th>商品数</th>';dates.forEach(function(d){h+='<th>'+d.slice(5)+'<br>新增 / 累计</th>'});h+='</tr>';
+ S.forEach(function(s){h+='<tr><td>'+(s.shop_url?'<a href="'+esc(s.shop_url)+'" target="_blank" rel="noopener">'+esc(s.seller)+'</a>':esc(s.seller))+'</td><td>'+s.n_listings+'</td>';
+  dates.forEach(function(d){h+='<td><b>'+f(s.new[d])+'</b><br><span class="muted">'+f(s.cum[d])+'</span></td>'});h+='</tr>'});
+ document.getElementById("tbl").innerHTML=h;
+}
+document.getElementById("upd").textContent=DATA.updated;document.getElementById("snap").textContent=DATA.last_snapshot;
+Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(t){t.onclick=function(){region=t.getAttribute("data-r");
+ Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(x){x.classList.toggle("on",x===t)});render()}});
+render();
+</script></body></html>'''
+js=json.dumps(data,ensure_ascii=False).replace('</','<\\/')
+open(os.path.join(OUT,'index.html'),'w',encoding='utf-8').write(TPL.replace('__DATA__',js))
+print('built',os.path.join(OUT,'index.html'))
