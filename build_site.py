@@ -51,6 +51,16 @@ def build_hourly():
     return H,csvrows
 hourly,hcsv=build_hourly()
 data['hourly']=hourly
+# ---- FunPay (optional section; failure here must never break the Plati pages) ----
+FPD=os.path.join(D,'funpay')
+try:
+    sys.path.insert(0,FPD)
+    import build_funpay
+    data['funpay']=build_funpay.build(OUT)
+    data['funpay_rule']=open(os.path.join(FPD,'selection_rule.txt'),encoding='utf-8').read().strip() if os.path.exists(os.path.join(FPD,'selection_rule.txt')) else ''
+    FPHTML=open(os.path.join(FPD,'funpay_view.html'),encoding='utf-8').read(); FPJS=open(os.path.join(FPD,'funpay_view.js'),encoding='utf-8').read()
+except Exception as e:
+    print('FunPay section skipped:',e,file=sys.stderr); data['funpay']=None; FPHTML=''; FPJS='function fpRender(){}'
 with open(os.path.join(OUT,'hourly.csv'),'w',newline='',encoding='utf-8') as f:
     w=csv.writer(f); w.writerow(['ts_end','region','seller_id','seller','ts_prev','elapsed_min','new_orders','cum_sales','status']); w.writerows(hcsv)
 json.dump(data,open(os.path.join(OUT,'data.json'),'w',encoding='utf-8'),ensure_ascii=False,indent=1)
@@ -62,7 +72,7 @@ TPL=r'''<!DOCTYPE html>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f6f8;color:#222;font-size:14px}
 header{background:#1f2937;color:#fff;padding:16px 14px}h1{margin:0 0 6px;font-size:18px}header p{margin:2px 0;font-size:12px;color:#cbd5e1}
-.tabs{display:flex;gap:8px;padding:12px 14px 0}.tab{flex:1;padding:10px 0;text-align:center;border-radius:8px;background:#e5e7eb;font-weight:600;cursor:pointer;border:0;font-size:14px}
+.tabs{display:flex;gap:8px;padding:12px 14px 0}.tabs{flex-wrap:wrap}.tab{flex:1 1 30%;padding:10px 0;text-align:center;border-radius:8px;background:#e5e7eb;font-weight:600;cursor:pointer;border:0;font-size:14px}
 .tab.on{background:#2563eb;color:#fff}.card{background:#fff;margin:12px 14px;border-radius:10px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
 h2{font-size:15px;margin:0 0 10px}.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 table{border-collapse:collapse;width:100%;min-width:max-content}th,td{padding:7px 8px;border-bottom:1px solid #eee;text-align:right;white-space:nowrap}
@@ -74,8 +84,8 @@ a{color:#2563eb;text-decoration:none}.muted{color:#9ca3af}.bar{display:flex;alig
 </style></head><body>
 <header><h1>Plati 苹果礼品卡卖家每日销量监测</h1>
 <p>最后更新：<span id="upd"></span></p><p>最近一次采集：<span id="snap"></span></p>
-<p>每天 20:00（北京时间）记录日统计；“每小时”页签每小时采集一次；各卖家分开统计，不做跨卖家合计。</p></header>
-<div class="tabs"><button class="tab on" data-r="US">美国卡 前10卖家</button><button class="tab" data-r="TR">土耳其卡 前10卖家</button><button class="tab" data-r="H">每小时</button></div>
+<p>含 Plati 与 FunPay 两个来源（FunPay 为评价数代理指标，见其页签说明）。</p><p>Plati：每天 20:00（北京时间）记录日统计；“每小时”页签每小时采集一次；各卖家分开统计，不做跨卖家合计。</p></header>
+<div class="tabs"><button class="tab on" data-r="US">美国卡 前10卖家</button><button class="tab" data-r="TR">土耳其卡 前10卖家</button><button class="tab" data-r="H">每小时</button><button class="tab" data-r="FU">FunPay 美国卡</button><button class="tab" data-r="FT">FunPay 土耳其卡</button></div>
 <div id="daily">
 <div class="card"><h2 id="bt"></h2><div id="bars"></div></div>
 <div class="card"><h2 id="tt"></h2><div class="scroll"><table id="tbl"></table></div>
@@ -88,6 +98,7 @@ a{color:#2563eb;text-decoration:none}.muted{color:#9ca3af}.bar{display:flex;alig
 <ul class="note"><li><b>每小时数据（近似值）：</b>每小时采集一次各卖家商品的“累计已售”计数器（同样按卖家合并所有面额），每小时新增 = 相邻两次快照的累计之差。</li>
 <li>每小时数据从首次每小时快照（<span id="hfirst"></span>）开始，之前没有数据；每小时采集与每晚 20:00 的日统计互相独立，两者数字可能不完全一致。</li>
 <li>“24h合计”只对单个卖家，累加最近24小时内有数据的时段，并标注已覆盖的小时数；不同卖家之间不求和。</li></ul></div>
+__FPHTML__
 <ul class="note" id="dnote"><li><b>数据说明（近似值）：</b>数据来自 Plati 公开搜索接口中各商品的“累计已售”计数器，对每个卖家下固定的苹果礼品卡商品，按卖家合并所有面额后求和。</li>
 <li>每日新增订单 = 当晚 20:00 快照与上一日快照的累计销量之差，并非卖家后台的真实订单数。</li>
 <li>若某商品当次搜索未被返回，则不会计入该卖家，数字可能略偏低；“—”表示当天无对比数据（首日基线或缺数据）。</li>
@@ -109,7 +120,7 @@ function renderH(){var H=DATA.hourly,cols=H.cols.slice(),rc=cols.slice().reverse
   S.filter(function(s){return s.region==r}).forEach(function(s){h+='<tr><td>'+esc(s.seller)+'</td><td><b>'+f(s.total24)+'</b></td>';
    rc.forEach(function(t){var i=cols.indexOf(t);h+='<td>'+f(s.vals[i])+'</td>'});h+='</tr>'})});
  document.getElementById("htbl").innerHTML=h}
-function show(){var H=region=="H";document.getElementById("daily").style.display=H?"none":"";document.getElementById("dnote").style.display=H?"none":"";document.getElementById("hourly").style.display=H?"":"none";if(H)renderH();else render()}
+function show(){var H=region=="H",X=region=="FU"||region=="FT";document.getElementById("daily").style.display=(H||X)?"none":"";document.getElementById("dnote").style.display=(H||X)?"none":"";document.getElementById("hourly").style.display=H?"":"none";var fe=document.getElementById("fp");if(fe)fe.style.display=X?"":"none";if(X)fpRender();else if(H)renderH();else render()}
 function f(n){return n==null?"—":String(n).replace(/\B(?=(\d{3})+(?!\d))/g,",")}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function render(){
@@ -129,8 +140,9 @@ function render(){
 document.getElementById("upd").textContent=DATA.updated;document.getElementById("snap").textContent=DATA.last_snapshot;
 Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(t){t.onclick=function(){region=t.getAttribute("data-r");
  Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(x){x.classList.toggle("on",x===t)});show()}});
+__FPJS__
 show();
 </script></body></html>'''
 js=json.dumps(data,ensure_ascii=False).replace('</','<\\/')
-open(os.path.join(OUT,'index.html'),'w',encoding='utf-8').write(TPL.replace('__DATA__',js))
+open(os.path.join(OUT,'index.html'),'w',encoding='utf-8').write(TPL.replace('__FPHTML__',FPHTML).replace('__FPJS__',FPJS).replace('__DATA__',js))
 print('built',os.path.join(OUT,'index.html'))
