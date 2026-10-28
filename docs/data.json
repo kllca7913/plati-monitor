@@ -224,7 +224,7 @@
    "new": {}
   }
  ],
- "updated": "2026-10-29 01:08（北京时间）",
+ "updated": "2026-10-29 01:16（北京时间）",
  "last_snapshot": "2026-10-28 20:14",
  "hourly": {
   "cols": [
@@ -533,14 +533,20 @@
     "url": "https://funpay.com/en/users/12873285/",
     "vals": [
      0,
-     1
+     1,
+     0
     ],
     "total24": 1,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 1,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -571,7 +577,7 @@
      1
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -597,7 +603,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -632,14 +638,20 @@
     "url": "https://funpay.com/en/users/711113/",
     "vals": [
      0,
-     1
+     1,
+     0
     ],
     "total24": 1,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 1,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -670,7 +682,7 @@
      1
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -696,7 +708,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -731,19 +743,25 @@
     "url": "https://funpay.com/en/users/582023/",
     "vals": [
      0,
-     4
+     4,
+     2
     ],
-    "total24": 4,
-    "cov24": 60,
+    "total24": 6,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 4,
       "min": 60,
       "gap": false
+     },
+     "2026-10-29": {
+      "new": 2,
+      "min": 64,
+      "gap": false
      }
     },
     "hsum": [
-     0,
+     2,
      0,
      0,
      0,
@@ -769,7 +787,7 @@
      4
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -795,7 +813,7 @@
      1
     ],
     "avg": [
-     null,
+     2.0,
      null,
      null,
      null,
@@ -820,8 +838,8 @@
      null,
      4.0
     ],
-    "cum": 4,
-    "total_reviews": 4542
+    "cum": 6,
+    "total_reviews": 4545
    },
    {
     "region": "TR",
@@ -830,14 +848,20 @@
     "url": "https://funpay.com/en/users/4646882/",
     "vals": [
      0,
+     0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -868,7 +892,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -894,7 +918,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -920,7 +944,7 @@
      0.0
     ],
     "cum": 0,
-    "total_reviews": 13279
+    "total_reviews": 13289
    },
    {
     "region": "TR",
@@ -929,19 +953,25 @@
     "url": "https://funpay.com/en/users/862048/",
     "vals": [
      0,
-     0
+     0,
+     2
     ],
-    "total24": 0,
-    "cov24": 60,
+    "total24": 2,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
       "gap": false
+     },
+     "2026-10-29": {
+      "new": 2,
+      "min": 64,
+      "gap": false
      }
     },
     "hsum": [
-     0,
+     2,
      0,
      0,
      0,
@@ -967,7 +997,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -993,7 +1023,7 @@
      1
     ],
     "avg": [
-     null,
+     2.0,
      null,
      null,
      null,
@@ -1018,8 +1048,8 @@
      null,
      0.0
     ],
-    "cum": 0,
-    "total_reviews": 517
+    "cum": 2,
+    "total_reviews": 519
    },
    {
     "region": "TR",
@@ -1028,14 +1058,20 @@
     "url": "https://funpay.com/en/users/7852181/",
     "vals": [
      0,
+     0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -1066,7 +1102,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -1092,7 +1128,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -1127,14 +1163,20 @@
     "url": "https://funpay.com/en/users/18832359/",
     "vals": [
      0,
+     0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -1165,7 +1207,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -1191,7 +1233,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -1226,14 +1268,20 @@
     "url": "https://funpay.com/en/users/2520737/",
     "vals": [
      0,
+     0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -1264,7 +1312,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -1290,7 +1338,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -1316,7 +1364,7 @@
      0.0
     ],
     "cum": 0,
-    "total_reviews": 9507
+    "total_reviews": 9508
    },
    {
     "region": "TR",
@@ -1325,14 +1373,20 @@
     "url": "https://funpay.com/en/users/19848114/",
     "vals": [
      0,
+     0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -1363,7 +1417,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -1389,7 +1443,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -1424,14 +1478,20 @@
     "url": "https://funpay.com/en/users/8285779/",
     "vals": [
      0,
+     0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -1462,7 +1522,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -1488,7 +1548,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -1523,316 +1583,25 @@
     "url": "https://funpay.com/en/users/6354852/",
     "vals": [
      0,
+     1,
      1
     ],
-    "total24": 1,
-    "cov24": 60,
+    "total24": 2,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 1,
       "min": 60,
       "gap": false
-     }
-    },
-    "hsum": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     1
-    ],
-    "hobs": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     1
-    ],
-    "avg": [
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     1.0
-    ],
-    "cum": 1,
-    "total_reviews": 9602
-   },
-   {
-    "region": "US",
-    "seller": "PandaKeys",
-    "uid": "21587905",
-    "url": "https://funpay.com/en/users/21587905/",
-    "vals": [
-     0,
-     0
-    ],
-    "total24": 0,
-    "cov24": 60,
-    "daily": {
-     "2026-10-28": {
-      "new": 0,
-      "min": 60,
+     },
+     "2026-10-29": {
+      "new": 1,
+      "min": 64,
       "gap": false
      }
     },
     "hsum": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "hobs": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     1
-    ],
-    "avg": [
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     0.0
-    ],
-    "cum": 0,
-    "total_reviews": 496
-   },
-   {
-    "region": "US",
-    "seller": "SpiriTFury",
-    "uid": "4454294",
-    "url": "https://funpay.com/en/users/4454294/",
-    "vals": [
-     0,
-     0
-    ],
-    "total24": 0,
-    "cov24": 60,
-    "daily": {
-     "2026-10-28": {
-      "new": 0,
-      "min": 60,
-      "gap": false
-     }
-    },
-    "hsum": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "hobs": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     1
-    ],
-    "avg": [
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     0.0
-    ],
-    "cum": 0,
-    "total_reviews": 26935
-   },
-   {
-    "region": "US",
-    "seller": "zeskasteam",
-    "uid": "21563105",
-    "url": "https://funpay.com/en/users/21563105/",
-    "vals": [
      1,
-     1
-    ],
-    "total24": 2,
-    "cov24": 60,
-    "daily": {
-     "2026-10-28": {
-      "new": 2,
-      "min": 60,
-      "gap": false
-     }
-    },
-    "hsum": [
-     0,
      0,
      0,
      0,
@@ -1858,7 +1627,7 @@
      1
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -1884,7 +1653,7 @@
      1
     ],
     "avg": [
-     null,
+     1.0,
      null,
      null,
      null,
@@ -1910,23 +1679,29 @@
      1.0
     ],
     "cum": 2,
-    "total_reviews": 296
+    "total_reviews": 9603
    },
    {
     "region": "US",
-    "seller": "Heyters01",
-    "uid": "15380716",
-    "url": "https://funpay.com/en/users/15380716/",
+    "seller": "PandaKeys",
+    "uid": "21587905",
+    "url": "https://funpay.com/en/users/21587905/",
     "vals": [
+     0,
      0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -1957,7 +1732,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -1983,7 +1758,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -2009,23 +1784,29 @@
      0.0
     ],
     "cum": 0,
-    "total_reviews": 1188
+    "total_reviews": 507
    },
    {
     "region": "US",
-    "seller": "Aleks2929",
-    "uid": "4089531",
-    "url": "https://funpay.com/en/users/4089531/",
+    "seller": "SpiriTFury",
+    "uid": "4454294",
+    "url": "https://funpay.com/en/users/4454294/",
     "vals": [
+     0,
      0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -2056,7 +1837,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -2082,7 +1863,322 @@
      1
     ],
     "avg": [
+     0.0,
      null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0.0
+    ],
+    "cum": 0,
+    "total_reviews": 26936
+   },
+   {
+    "region": "US",
+    "seller": "zeskasteam",
+    "uid": "21563105",
+    "url": "https://funpay.com/en/users/21563105/",
+    "vals": [
+     1,
+     1,
+     1
+    ],
+    "total24": 3,
+    "cov24": 124,
+    "daily": {
+     "2026-10-28": {
+      "new": 2,
+      "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 1,
+      "min": 64,
+      "gap": false
+     }
+    },
+    "hsum": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "hobs": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "avg": [
+     1.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.0
+    ],
+    "cum": 3,
+    "total_reviews": 297
+   },
+   {
+    "region": "US",
+    "seller": "Heyters01",
+    "uid": "15380716",
+    "url": "https://funpay.com/en/users/15380716/",
+    "vals": [
+     0,
+     0,
+     1
+    ],
+    "total24": 1,
+    "cov24": 124,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 1,
+      "min": 64,
+      "gap": false
+     }
+    },
+    "hsum": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "hobs": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "avg": [
+     1.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0.0
+    ],
+    "cum": 1,
+    "total_reviews": 1189
+   },
+   {
+    "region": "US",
+    "seller": "Aleks2929",
+    "uid": "4089531",
+    "url": "https://funpay.com/en/users/4089531/",
+    "vals": [
+     0,
+     0,
+     0
+    ],
+    "total24": 0,
+    "cov24": 124,
+    "daily": {
+     "2026-10-28": {
+      "new": 0,
+      "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
+      "gap": false
+     }
+    },
+    "hsum": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "hobs": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "avg": [
+     0.0,
      null,
      null,
      null,
@@ -2117,14 +2213,20 @@
     "url": "https://funpay.com/en/users/12815044/",
     "vals": [
      0,
+     0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -2155,7 +2257,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -2181,7 +2283,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -2207,7 +2309,7 @@
      0.0
     ],
     "cum": 0,
-    "total_reviews": 16002
+    "total_reviews": 16005
    },
    {
     "region": "US",
@@ -2216,14 +2318,20 @@
     "url": "https://funpay.com/en/users/17486205/",
     "vals": [
      0,
+     0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -2254,7 +2362,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -2280,7 +2388,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -2315,14 +2423,20 @@
     "url": "https://funpay.com/en/users/13697944/",
     "vals": [
      0,
+     0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -2353,7 +2467,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -2379,7 +2493,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -2414,14 +2528,20 @@
     "url": "https://funpay.com/en/users/6686804/",
     "vals": [
      0,
+     0,
      0
     ],
     "total24": 0,
-    "cov24": 60,
+    "cov24": 124,
     "daily": {
      "2026-10-28": {
       "new": 0,
       "min": 60,
+      "gap": false
+     },
+     "2026-10-29": {
+      "new": 0,
+      "min": 64,
       "gap": false
      }
     },
@@ -2452,7 +2572,7 @@
      0
     ],
     "hobs": [
-     0,
+     1,
      0,
      0,
      0,
@@ -2478,7 +2598,7 @@
      1
     ],
     "avg": [
-     null,
+     0.0,
      null,
      null,
      null,
@@ -2504,23 +2624,26 @@
      0.0
     ],
     "cum": 0,
-    "total_reviews": 65201
+    "total_reviews": 65207
    }
   ],
   "cols": [
    "2026-10-28T23:16",
-   "2026-10-29T00:11"
+   "2026-10-29T00:11",
+   "2026-10-29T01:15"
   ],
   "prev": [
    "2026-10-28T23:11",
-   "2026-10-28T23:16"
+   "2026-10-28T23:16",
+   "2026-10-29T00:11"
   ],
   "dates": [
-   "2026-10-28"
+   "2026-10-28",
+   "2026-10-29"
   ],
   "first_ts": "2026-10-28T23:11",
-  "last_ts": "2026-10-29T00:11",
-  "nsnap": 3
+  "last_ts": "2026-10-29T01:15",
+  "nsnap": 4
  },
  "funpay_rule": "前10名不是 FunPay 官方榜单（FunPay 不公开销量），是 2026-10-28 晚按公开数据选出并固定的：在“App Store & iTunes → Gift Cards”分类（funpay.com/en/lots/1316/）有商品的卖家中，统计其“App Store & iTunes”类买家评价在本月（10月1日–28日）的条数（最多读取最新1000条评价，达到上限的数字是下限），按条数取前10。地区：卖家的 TRY 面额商品占其 TRY+USD 商品60%以上归入土耳其榜，USD 占60%以上归入美国榜；两边都卖且比例接近的大卖家（如 theptzshop、BadMaxi、nbshopgames、C00ki3、shiqu）因评价无法区分国家而没有入选。名单固定，不会自动更新。"
 }
