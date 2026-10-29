@@ -1,6 +1,7 @@
 {
  "dates": [
-  "2026-10-28"
+  "2026-10-28",
+  "2026-10-29"
  ],
  "sellers": [
   {
@@ -10,9 +11,12 @@
    "shop_url": "https://plati.market/seller/all-for-gamers/316903/",
    "n_listings": 1,
    "cum": {
-    "2026-10-28": 306560
+    "2026-10-28": 306560,
+    "2026-10-29": 309140
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 2580
+   }
   },
   {
    "seller": "King of Rome",
@@ -21,9 +25,12 @@
    "shop_url": "https://plati.market/seller/king-of-rome/1288852/",
    "n_listings": 18,
    "cum": {
-    "2026-10-28": 42009
+    "2026-10-28": 42009,
+    "2026-10-29": 42195
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 186
+   }
   },
   {
    "seller": "CNLJayCee",
@@ -32,9 +39,12 @@
    "shop_url": "https://plati.market/seller/cnljaycee/1091690/",
    "n_listings": 18,
    "cum": {
-    "2026-10-28": 28997
+    "2026-10-28": 28997,
+    "2026-10-29": 29101
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 104
+   }
   },
   {
    "seller": "1WayBuy",
@@ -43,9 +53,12 @@
    "shop_url": "https://plati.market/seller/1waybuy/27402/",
    "n_listings": 7,
    "cum": {
-    "2026-10-28": 28780
+    "2026-10-28": 28780,
+    "2026-10-29": 28799
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 19
+   }
   },
   {
    "seller": "Igromagaz",
@@ -54,9 +67,12 @@
    "shop_url": "https://plati.market/seller/igromagaz/1062128/",
    "n_listings": 1,
    "cum": {
-    "2026-10-28": 24983
+    "2026-10-28": 24983,
+    "2026-10-29": 25044
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 61
+   }
   },
   {
    "seller": "Nomorefarm",
@@ -65,9 +81,12 @@
    "shop_url": "https://plati.market/seller/nomorefarm/1079090/",
    "n_listings": 5,
    "cum": {
-    "2026-10-28": 19512
+    "2026-10-28": 19512,
+    "2026-10-29": 19633
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 121
+   }
   },
   {
    "seller": "forYou97",
@@ -76,9 +95,12 @@
    "shop_url": "https://plati.market/seller/foryou97/325919/",
    "n_listings": 1,
    "cum": {
-    "2026-10-28": 19110
+    "2026-10-28": 19110,
+    "2026-10-29": 19111
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 1
+   }
   },
   {
    "seller": "BAZAAR-STORE",
@@ -87,9 +109,12 @@
    "shop_url": "https://plati.market/seller/bazaar-store/1060044/",
    "n_listings": 1,
    "cum": {
-    "2026-10-28": 13782
+    "2026-10-28": 13782,
+    "2026-10-29": 13783
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 1
+   }
   },
   {
    "seller": "nbshop",
@@ -98,9 +123,12 @@
    "shop_url": "https://plati.market/seller/nbshop/1033953/",
    "n_listings": 1,
    "cum": {
-    "2026-10-28": 13435
+    "2026-10-28": 13435,
+    "2026-10-29": 13457
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 22
+   }
   },
   {
    "seller": "Turkey cards",
@@ -109,9 +137,12 @@
    "shop_url": "https://plati.market/seller/turkey-cards/1123864/",
    "n_listings": 4,
    "cum": {
-    "2026-10-28": 10251
+    "2026-10-28": 10251,
+    "2026-10-29": 10252
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 1
+   }
   },
   {
    "seller": "x-sale",
@@ -120,9 +151,12 @@
    "shop_url": "https://plati.market/seller/x-sale/97839/",
    "n_listings": 1,
    "cum": {
-    "2026-10-28": 474960
+    "2026-10-28": 474960,
+    "2026-10-29": 475595
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 635
+   }
   },
   {
    "seller": "All for Gamers",
@@ -131,9 +165,12 @@
    "shop_url": "https://plati.market/seller/all-for-gamers/316903/",
    "n_listings": 1,
    "cum": {
-    "2026-10-28": 215801
+    "2026-10-28": 215801,
+    "2026-10-29": 216262
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 461
+   }
   },
   {
    "seller": "1keys",
@@ -142,9 +179,12 @@
    "shop_url": "https://plati.market/seller/1keys/180983/",
    "n_listings": 11,
    "cum": {
-    "2026-10-28": 43120
+    "2026-10-28": 43120,
+    "2026-10-29": 43127
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 7
+   }
   },
   {
    "seller": "PROMARKET88",
@@ -153,9 +193,12 @@
    "shop_url": "https://plati.market/seller/promarket88/315421/",
    "n_listings": 6,
    "cum": {
-    "2026-10-28": 33511
+    "2026-10-28": 33511,
+    "2026-10-29": 33594
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 83
+   }
   },
   {
    "seller": "1WayBuy",
@@ -164,9 +207,12 @@
    "shop_url": "https://plati.market/seller/1waybuy/27402/",
    "n_listings": 7,
    "cum": {
-    "2026-10-28": 27005
+    "2026-10-28": 27005,
+    "2026-10-29": 27007
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 2
+   }
   },
   {
    "seller": "King of Rome",
@@ -175,9 +221,12 @@
    "shop_url": "https://plati.market/seller/king-of-rome/1288852/",
    "n_listings": 21,
    "cum": {
-    "2026-10-28": 15609
+    "2026-10-28": 15609,
+    "2026-10-29": 14117
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 17
+   }
   },
   {
    "seller": "VIA.GAMES",
@@ -186,9 +235,12 @@
    "shop_url": "https://plati.market/seller/via-games/808751/",
    "n_listings": 1,
    "cum": {
-    "2026-10-28": 13272
+    "2026-10-28": 13272,
+    "2026-10-29": 13275
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 3
+   }
   },
   {
    "seller": "BEST-PRICE",
@@ -197,9 +249,12 @@
    "shop_url": "https://plati.market/seller/best-price/172340/",
    "n_listings": 4,
    "cum": {
-    "2026-10-28": 12852
+    "2026-10-28": 12852,
+    "2026-10-29": 12855
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 3
+   }
   },
   {
    "seller": "forYou97",
@@ -208,9 +263,12 @@
    "shop_url": "https://plati.market/seller/foryou97/325919/",
    "n_listings": 1,
    "cum": {
-    "2026-10-28": 11962
+    "2026-10-28": 11962,
+    "2026-10-29": 11965
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 3
+   }
   },
   {
    "seller": "Donatella",
@@ -219,13 +277,16 @@
    "shop_url": "https://plati.market/seller/donatella/1419853/",
    "n_listings": 1,
    "cum": {
-    "2026-10-28": 11296
+    "2026-10-28": 11296,
+    "2026-10-29": 11406
    },
-   "new": {}
+   "new": {
+    "2026-10-29": 110
+   }
   }
  ],
- "updated": "2026-10-29 19:07（北京时间）",
- "last_snapshot": "2026-10-28 20:14",
+ "updated": "2026-10-29 20:02（北京时间）",
+ "last_snapshot": "2026-10-29 20:02",
  "hourly": {
   "cols": [
    "2026-10-28T22:21",
