@@ -15,7 +15,7 @@ QS=[('itunes турция',1),('app store турция',1),('apple турция'
 HDR=['ts','region','seller_id','seller','cum_sales','listings_fetched','listings_expected']
 HIST=os.path.join(D,'hourly_history.csv')
 def get(q,p):
-    u='https://plati.io/api/search.ashx?query=%s&pagesize=500&pagenum=%d&visibleOnly=true&response=json'%(urllib.parse.quote(q),p)
+    u='https://plati.market/api/search.ashx?query=%s&pagesize=500&pagenum=%d&visibleOnly=true&response=json'%(urllib.parse.quote(q),p)
     for _ in range(3):
         r=subprocess.run(['curl','-s','-m','60','-A','Mozilla/5.0',u],capture_output=True,text=True)
         try: return json.loads(r.stdout)
