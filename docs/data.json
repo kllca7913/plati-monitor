@@ -1007,11 +1007,10 @@
    }
   }
  ],
- "updated": "2026-11-19 04:13（北京时间）",
+ "updated": "2026-11-19 05:05（北京时间）",
  "last_snapshot": "2026-11-18 20:10",
  "hourly": {
   "cols": [
-   "2026-11-18T05:01",
    "2026-11-18T06:02",
    "2026-11-18T07:09",
    "2026-11-18T08:03",
@@ -1034,7 +1033,8 @@
    "2026-11-19T01:04",
    "2026-11-19T02:09",
    "2026-11-19T03:03",
-   "2026-11-19T04:10"
+   "2026-11-19T04:10",
+   "2026-11-19T05:05"
   ],
   "sellers": [
    {
@@ -1042,7 +1042,6 @@
     "seller": "All for Gamers",
     "shop_url": "https://plati.market/seller/all-for-gamers/316903/",
     "vals": [
-     9,
      4,
      5,
      2,
@@ -1065,7 +1064,8 @@
      111,
      186,
      56,
-     57
+     57,
+     5
     ],
     "fvals": [
      1,
@@ -1516,18 +1516,18 @@
      111,
      186,
      56,
-     57
+     57,
+     5
     ],
-    "total24": 606,
-    "covered_min": 1440,
-    "cum": 331525
+    "total24": 602,
+    "covered_min": 1444,
+    "cum": 331530
    },
    {
     "region": "TR",
     "seller": "King of Rome",
     "shop_url": "https://plati.market/seller/king-of-rome/1288852/",
     "vals": [
-     84,
      1,
      0,
      0,
@@ -1550,7 +1550,8 @@
      3,
      5,
      2,
-     8
+     8,
+     0
     ],
     "fvals": [
      0,
@@ -2001,10 +2002,11 @@
      3,
      5,
      2,
-     8
+     8,
+     0
     ],
-    "total24": 155,
-    "covered_min": 1440,
+    "total24": 71,
+    "covered_min": 1444,
     "cum": 45170
    },
    {
@@ -2486,18 +2488,18 @@
      null,
      null,
      null,
+     null,
      null
     ],
     "total24": null,
     "covered_min": 0,
-    "cum": 18091
+    "cum": 18094
    },
    {
     "region": "TR",
     "seller": "1WayBuy",
     "shop_url": "https://plati.market/seller/1waybuy/27402/",
     "vals": [
-     1,
      0,
      0,
      0,
@@ -2520,7 +2522,8 @@
      0,
      1,
      1,
-     2
+     2,
+     1
     ],
     "fvals": [
      0,
@@ -2971,11 +2974,12 @@
      0,
      1,
      1,
-     2
+     2,
+     1
     ],
     "total24": 16,
-    "covered_min": 1440,
-    "cum": 29166
+    "covered_min": 1444,
+    "cum": 29167
    },
    {
     "region": "TR",
@@ -3456,6 +3460,7 @@
      null,
      null,
      null,
+     null,
      null
     ],
     "total24": null,
@@ -3467,7 +3472,6 @@
     "seller": "Nomorefarm",
     "shop_url": "https://plati.market/seller/nomorefarm/1079090/",
     "vals": [
-     46,
      2,
      1,
      1,
@@ -3489,6 +3493,7 @@
      9,
      3,
      6,
+     4,
      4,
      4
     ],
@@ -3941,11 +3946,12 @@
      3,
      6,
      4,
+     4,
      4
     ],
-    "total24": 122,
-    "covered_min": 1440,
-    "cum": 21848
+    "total24": 80,
+    "covered_min": 1444,
+    "cum": 21852
    },
    {
     "region": "TR",
@@ -4426,10 +4432,11 @@
      0,
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 1440,
+    "covered_min": 1444,
     "cum": 19146
    },
    {
@@ -4911,10 +4918,11 @@
      0,
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 1440,
+    "covered_min": 1444,
     "cum": 13795
    },
    {
@@ -4922,7 +4930,6 @@
     "seller": "nbshop",
     "shop_url": "https://plati.market/seller/nbshop/1033953/",
     "vals": [
-     0,
      11,
      1,
      0,
@@ -4945,7 +4952,8 @@
      3,
      3,
      0,
-     10
+     10,
+     1
     ],
     "fvals": [
      1,
@@ -5396,11 +5404,12 @@
      3,
      3,
      0,
-     10
+     10,
+     1
     ],
-    "total24": 84,
-    "covered_min": 1440,
-    "cum": 14768
+    "total24": 85,
+    "covered_min": 1444,
+    "cum": 14769
    },
    {
     "region": "TR",
@@ -5881,10 +5890,11 @@
      0,
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 1440,
+    "covered_min": 1444,
     "cum": 10276
    },
    {
@@ -5892,7 +5902,6 @@
     "seller": "x-sale",
     "shop_url": "https://plati.market/seller/x-sale/97839/",
     "vals": [
-     39,
      25,
      16,
      10,
@@ -5915,7 +5924,8 @@
      14,
      24,
      10,
-     15
+     15,
+     33
     ],
     "fvals": [
      0,
@@ -6366,18 +6376,18 @@
      14,
      24,
      10,
-     15
+     15,
+     33
     ],
-    "total24": 840,
-    "covered_min": 1440,
-    "cum": 490510
+    "total24": 834,
+    "covered_min": 1444,
+    "cum": 490543
    },
    {
     "region": "US",
     "seller": "All for Gamers",
     "shop_url": "https://plati.market/seller/all-for-gamers/316903/",
     "vals": [
-     2,
      8,
      5,
      4,
@@ -6400,7 +6410,8 @@
      30,
      14,
      16,
-     8
+     8,
+     7
     ],
     "fvals": [
      1,
@@ -6851,11 +6862,12 @@
      30,
      14,
      16,
-     8
+     8,
+     7
     ],
-    "total24": 258,
-    "covered_min": 1440,
-    "cum": 228596
+    "total24": 263,
+    "covered_min": 1444,
+    "cum": 228603
    },
    {
     "region": "US",
@@ -7336,6 +7348,7 @@
      null,
      null,
      null,
+     null,
      null
     ],
     "total24": null,
@@ -7347,7 +7360,6 @@
     "seller": "PROMARKET88",
     "shop_url": "https://plati.market/seller/promarket88/315421/",
     "vals": [
-     2,
      1,
      1,
      2,
@@ -7370,6 +7382,7 @@
      4,
      1,
      6,
+     5,
      5
     ],
     "fvals": [
@@ -7821,18 +7834,18 @@
      4,
      1,
      6,
+     5,
      5
     ],
-    "total24": 74,
-    "covered_min": 1440,
-    "cum": 35026
+    "total24": 77,
+    "covered_min": 1444,
+    "cum": 35031
    },
    {
     "region": "US",
     "seller": "1WayBuy",
     "shop_url": "https://plati.market/seller/1waybuy/27402/",
     "vals": [
-     1,
      0,
      0,
      0,
@@ -7849,6 +7862,7 @@
      1,
      0,
      1,
+     0,
      0,
      0,
      0,
@@ -8306,10 +8320,11 @@
      0,
      0,
      0,
+     0,
      0
     ],
-    "total24": 3,
-    "covered_min": 1440,
+    "total24": 2,
+    "covered_min": 1444,
     "cum": 27044
    },
    {
@@ -8317,7 +8332,6 @@
     "seller": "King of Rome",
     "shop_url": "https://plati.market/seller/king-of-rome/1288852/",
     "vals": [
-     3,
      1,
      2,
      1,
@@ -8340,7 +8354,8 @@
      null,
      null,
      null,
-     5
+     5,
+     2
     ],
     "fvals": [
      0,
@@ -8791,11 +8806,12 @@
      null,
      null,
      null,
-     5
+     5,
+     2
     ],
-    "total24": 14,
-    "covered_min": 544,
-    "cum": 16939
+    "total24": 13,
+    "covered_min": 548,
+    "cum": 16941
    },
    {
     "region": "US",
@@ -8820,9 +8836,9 @@
      0,
      0,
      0,
+     null,
+     null,
      0,
-     null,
-     null,
      0,
      0,
      0
@@ -9276,10 +9292,11 @@
      null,
      0,
      0,
+     0,
      0
     ],
     "total24": 0,
-    "covered_min": 1320,
+    "covered_min": 1324,
     "cum": 13302
    },
    {
@@ -9287,7 +9304,6 @@
     "seller": "BEST-PRICE",
     "shop_url": "https://plati.market/seller/best-price/172340/",
     "vals": [
-     null,
      null,
      0,
      0,
@@ -9310,7 +9326,8 @@
      0,
      0,
      0,
-     1
+     1,
+     0
     ],
     "fvals": [
      0,
@@ -9761,10 +9778,11 @@
      0,
      0,
      0,
-     1
+     1,
+     0
     ],
     "total24": 2,
-    "covered_min": 1328,
+    "covered_min": 1383,
     "cum": 12908
    },
    {
@@ -9791,8 +9809,8 @@
      0,
      0,
      0,
-     0,
      1,
+     0,
      0,
      0,
      0
@@ -10246,10 +10264,11 @@
      1,
      0,
      0,
+     0,
      0
     ],
     "total24": 1,
-    "covered_min": 1440,
+    "covered_min": 1444,
     "cum": 12161
    },
    {
@@ -10257,7 +10276,6 @@
     "seller": "Donatella",
     "shop_url": "https://plati.market/seller/donatella/1419853/",
     "vals": [
-     21,
      10,
      5,
      5,
@@ -10280,7 +10298,8 @@
      10,
      17,
      12,
-     7
+     7,
+     4
     ],
     "fvals": [
      0,
@@ -10731,17 +10750,17 @@
      10,
      17,
      12,
-     7
+     7,
+     4
     ],
-    "total24": 216,
-    "covered_min": 1440,
-    "cum": 14085
+    "total24": 199,
+    "covered_min": 1444,
+    "cum": 14089
    }
   ],
   "first_ts": "2026-10-28T22:19",
-  "last_ts": "2026-11-19T04:10",
+  "last_ts": "2026-11-19T05:05",
   "prev": [
-   "2026-11-18T04:10",
    "2026-11-18T05:01",
    "2026-11-18T06:02",
    "2026-11-18T07:09",
@@ -10764,7 +10783,8 @@
    "2026-11-19T00:01",
    "2026-11-19T01:04",
    "2026-11-19T02:09",
-   "2026-11-19T03:03"
+   "2026-11-19T03:03",
+   "2026-11-19T04:10"
   ],
   "fts": [
    "2026-10-28T22:21",
@@ -11215,7 +11235,8 @@
    "2026-11-19T01:04",
    "2026-11-19T02:09",
    "2026-11-19T03:03",
-   "2026-11-19T04:10"
+   "2026-11-19T04:10",
+   "2026-11-19T05:05"
   ],
   "fprev": [
    "2026-10-28T22:19",
@@ -11666,7 +11687,8 @@
    "2026-11-19T00:01",
    "2026-11-19T01:04",
    "2026-11-19T02:09",
-   "2026-11-19T03:03"
+   "2026-11-19T03:03",
+   "2026-11-19T04:10"
   ]
  },
  "funpay": {
